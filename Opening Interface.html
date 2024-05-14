@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opening Interface</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .main{
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%);
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+        }
+        
+        .navbar{
+            width: 1200px;
+            height: 75px;
+            margin: auto;
+        }
+        
+        .icon{
+            width: 200px;
+            float: left;
+            height: 70px;
+        }
+        
+        .logo{
+            color: #ff0015;
+            font-size: 35px;
+            font-family: Arial;
+            padding-left: 20px;
+            float: left;
+            padding-top: 10px;
+            margin-top: 5px
+        }
+        
+        .menu{
+            width: 400px;
+            float: left;
+            height: 70px;
+        }
+        
+         .logo {
+            color:#f8f4f4;
+            
+        }
+        ul{
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        ul li{
+            list-style: none;
+            margin-left: 62px;
+            margin-top: 27px;
+            font-size: 14px;
+        }
+        
+        ul li a{
+            text-decoration: none;
+            color: #fff;
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.4s ease-in-out;
+        }
+        
+        ul li a:hover{
+            color: #ff0037;
+        }
+        
+        .search{
+            width: 330px;
+            float: left;
+            margin-left: 270px;
+        }
+        
+        .srch{
+            font-family: 'Times New Roman';
+            width: 200px;
+            height: 40px;
+            background: transparent;
+            border: 1px solid #ff0022;
+            margin-top: 13px;
+            color: #fff;
+            border-right: none;
+            font-size: 16px;
+            float: left;
+            padding: 10px;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+        
+        .btn{
+            width: 100px;
+            height: 40px;
+            background: #ff004c;
+            border: 2px solid #ff0037;
+            margin-top: 13px;
+            color: #fff;
+            font-size: 15px;
+            border-bottom-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            transition: 0.2s ease;
+            cursor: pointer;
+        }
+        .btn:hover{
+            color: #000;
+        }
+        
+        .btn:focus{
+            outline: none;
+        }
+        
+        .srch:focus{
+            outline: none;
+        }
+        
+        .content{
+            width: 1200px;
+            height: auto;
+            margin: auto;
+            color: #fff;
+            position: relative;
+        }
+        
+        .content .par{
+            padding-left: 20px;
+            padding-bottom: 25px;
+            font-family: Arial;
+            letter-spacing: 1.2px;
+            line-height: 30px;
+        }
+        
+        .content h1{
+            font-family: 'Times New Roman';
+            font-size: 50px;
+            padding-left: 20px;
+            margin-top: 9%;
+            letter-spacing: 2px;
+        }
+        
+        .content .cn{
+            width: 160px;
+            height: 40px;
+            background: #ff0022;
+            border: none;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .4s ease;
+            
+        }
+        
+        .content .cn a{
+            text-decoration: none;
+            color: #000;
+            transition: .3s ease;
+        }
+        
+        .cn:hover{
+            background-color: #fff;
+        }
+        
+        .content span{
+            color: #ff0040;
+            font-size: 65px
+        }
+        
+        .form{
+            width: 250px;
+            height: 380px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+            position: absolute;
+            top: -20px;
+            left: 870px;
+            transform: translate(0%,-5%);
+            border-radius: 10px;
+            padding: 25px;
+        }
+        
+        .form h2{
+            width: 220px;
+            font-family: sans-serif;
+            text-align: center;
+            color: blue;
+            font-size: 22px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 2px;
+            padding: 8px;
+        }
+        
+        .form input{
+            width: 240px;
+            height: 35px;
+            background: transparent;
+            border-bottom: 1px solid #ff0022;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            color: #fff;
+            font-size: 15px;
+            letter-spacing: 1px;
+            margin-top: 30px;
+            font-family: sans-serif;
+        }
+        
+        .form input:focus{
+            outline: none;
+        }
+        
+        ::placeholder{
+            color: #fff;
+            font-family: Arial;
+        }
+        
+        .btnn{
+            width: 240px;
+            height: 40px;
+            background: #ff0037;
+            border: none;
+            margin-top: 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #fff;
+            transition: 0.4s ease;
+        }
+        .btnn:hover{
+            background: #fff;
+            color: #ff0022;
+        }
+        .btnn a{
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+        .form .link{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            padding-top: 20px;
+            text-align: center;
+        }
+        .form .link a{
+            text-decoration: none;
+            color: #ff0037;
+        }
+        .liw{
+            padding-top: 15px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        .icons a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .icons ion-icon{
+            color: #fff;
+            font-size: 30px;
+            padding-left: 14px;
+            padding-top: 5px;
+            transition: 0.3s ease;
+        }
+        .icons ion-icon:hover{
+            color: #ff002b;
+        }
+        
+        body{
+            background-image: url("K&A 1.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        
+        }
+        
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .button-wrapper {
+            margin: 20px;
+            text-align: center;
+        }
+        
+        .button-photo {
+            width: 200px; /* Adjust as needed */
+            height: 200px; /* Adjust as needed */
+            border-radius: 50%; /* Makes the photo round */
+            margin-bottom: 10px;
+        }
+        
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff; /* Example background color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            background-color: #0056b3; /* Darker shade of the background color on hover */
+        }
+        
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('K&A 1.jpg'); /* Replace 'path/to/keen_and_able_hd_image.jpg' with the actual path to your image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: rgb(48, 230, 72);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .header-text {
+            text-align: center;
+            color: #050000;
+            font-size: 24px;
+            margin-bottom: 700px;
+            margin-top: px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Brochure</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="https://www.keenable.in/" target="_blank">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h1>Helping Hand for <br><span>Foxians</span> <br>& newbies</h1>
+                <p class="par">all the newbies who face problems with some task or how to do the same task so we are here <br> to solve your problems and here we provide the solutions to all your problems. <br> Basically, this is what technology is made for to ease up our daily workings.
+    
+                </p>
+    <div class="header-text">
+        Welcome to our Brochure of our company  About our project
+        This is our project for all the newbies who face problems of some task or how to do same task so we are here to solve your problems and here we provide the solutions of all your problems
+        
+        
+    </div>
+
+    <div class="buttons-container"> 
+        <button class="button" style="position: absolute; top: 250px; left: 300px;" onclick="openGoogleDoc('1q9nrnaOYQYDnTWy0bqVdXJ9FCOIVBArLXKpQ1M-6yJY')">P and L</button>
+        <button class="button" style="position: absolute; top: 350px; left: 300px;" onclick="openGoogleDoc('1Ylqfk-pQAu4LYtbFT-pQCL6Mj6TRgXkI00SrYR97XT0')">How to Install Ubuntu</button>
+        <button class="button" style="position: absolute; top: 450px; left: 300px;" onclick="openGoogleDoc('DOC_ID_3')">Button 3</button>
+        <button class="button" style="position: absolute; top: 550px; left: 300px;" onclick="openGoogleDoc('DOC_ID_4')">Button 4</button>
+        <button class="button" style="position: absolute; top: 650px; left: 300px;" onclick="openGoogleDoc('DOC_ID_5')">Button 5</button>
+
+        <button class="button" style="position: absolute; top: 250px; right: 300px;" onclick="openGoogleDoc('DOC_ID_6')">Button 6</button>
+        <button class="button" style="position: absolute; top: 350px; right: 300px;" onclick="openGoogleDoc('DOC_ID_7')">Button 7</button>
+        <button class="button" style="position: absolute; top: 450px; right: 300px;" onclick="openGoogleDoc('DOC_ID_8')">Button 8</button>
+        <button class="button" style="position: absolute; top: 550px; right: 300px;" onclick="openGoogleDoc('DOC_ID_9')">Button 9</button>
+        <button class="button" style="position: absolute; top: 650px; right: 300px;" onclick="openGoogleDoc('DOC_ID_10')">Button 10</button>
+    </div> 
+
+    <script>
+        function openGoogleDoc(docId) {
+            window.open('https://docs.google.com/document/d/' + docId, '_blank');
+        }
+    </script>
+</body>
+</html>
+
